@@ -29,8 +29,6 @@ class TwitterExtension extends LoaderExtension
                 $configuration->setParameter('kris.twitter.'.$attribute, $config[$attribute]);
             }
         }
-
-        return $configuration;
     }
 
     public function getXsdValidationBasePath()
