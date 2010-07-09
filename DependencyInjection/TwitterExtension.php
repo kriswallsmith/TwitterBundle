@@ -20,6 +20,10 @@ class TwitterExtension extends LoaderExtension
             $configuration->merge($loader->load($this->resources['twitter']));
         }
 
+        if (isset($config['alias'])) {
+            $configuration->setAlias($config['alias'], 'kris.twitter');
+        }
+
         foreach (array('consumer_key', 'consumer_secret') as $attribute) {
             if (isset($config[$attribute])) {
                 $configuration->setParameter('kris.twitter.'.$attribute, $config[$attribute]);

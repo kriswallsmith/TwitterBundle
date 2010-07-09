@@ -33,11 +33,13 @@ Installation
 
           # application/config/config.yml
           twitter.api:
+            alias: twitter
             consumer_key: 123456879
             consumer_secret: s3cr3t
 
           # application/config/config.xml
           <twitter:api
+            alias="twitter"
             consumer_key="123456879"
             consumer_secret="s3cr3t"
           />
