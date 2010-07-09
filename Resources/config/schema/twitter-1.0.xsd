@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xsd:schema xmlns="http://www.symfony-project.org/schema/dic/twitter"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.symfony-project.org/schema/dic/twitter"
+    elementFormDefault="qualified">
+
+    <xsd:element name="api">
+        <xsd:complexType>
+            <xsd:attribute name="consumer_key" type="xsd:string" />
+            <xsd:attribute name="consumer_secret" type="xsd:string" />
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

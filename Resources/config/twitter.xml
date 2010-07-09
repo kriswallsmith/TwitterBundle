@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://www.symfony-project.org/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.symfony-project.org/schema/dic/services http://www.symfony-project.org/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="kris.twitter.class">TwitterOAuth</parameter>
+        <parameter key="kris.twitter.consumer_key">null</parameter>
+        <parameter key="kris.twitter.consumer_secret">null</parameter>
+        <parameter key="kris.twitter.anywhere.helper.class">Bundle\Kris\TwitterBundle\Templating\Helper\TwitterAnywhereHelper</parameter>
+        <parameter key="kris.twitter.anywhere.version">1</parameter>
+        <parameter key="kris.twitter.anywhere.callback_url">null</parameter>
+    </parameters>
+
+    <services>
+        <service id="twitter" class="%kris.twitter.class%">
+            <argument>%kris.twitter.consumer_key%</argument>
+            <argument>%kris.twitter.consumer_secret%</argument>
+        </service>
+        <service id="kris.twitter.anywhere.helper" class="%kris.twitter.anywhere.helper.class%">
+            <annotation name="templating.helper" alias="twitter_anywhere" />
+            <argument>%kris.twitter.consumer_key%</argument>
+            <argument>%kris.twitter.anywhere.version%</argument>
+            <argument>%kris.twitter.anywhere.callback_url%</argument>
+        </service>
+    </services>
+</container>
