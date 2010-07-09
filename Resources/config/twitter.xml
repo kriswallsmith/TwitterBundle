@@ -14,7 +14,7 @@
     </parameters>
 
     <services>
-        <service id="twitter" class="%kris.twitter.class%">
+        <service id="kris.twitter" class="%kris.twitter.class%">
             <argument>%kris.twitter.consumer_key%</argument>
             <argument>%kris.twitter.consumer_secret%</argument>
         </service>
