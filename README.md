@@ -50,18 +50,18 @@ Using Twitter @Anywhere
 A templating helper is included for using Twitter @Anywhere. To use it, first
 call the `->setup()` method toward the top of your DOM:
 
-      <?php echo $view->twitter_anywhere->setup() ?>
+      <?php echo $view['twitter_anywhere']->setup() ?>
     </head>
 
 Once that's done, you can queue up JavaScript to be run once the library is
 actually loaded:
 
     <span id="twitter_connect"></span>
-    <?php $view->twitter_anywhere->queue('T("#twitter_connect").connectButton()') ?>
+    <?php $view['twitter_anywhere']->queue('T("#twitter_connect").connectButton()') ?>
 
 Finally, call the `->initialize()` method toward the bottom of the DOM:
 
-      <?php $view->twitter_anywhere->initialize() ?>
+      <?php $view['twitter_anywhere']->initialize() ?>
     </body>
 
 ### Configuring Twitter @Anywhere
