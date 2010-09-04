@@ -2,7 +2,7 @@
 
 namespace Bundle\Kris\TwitterBundle\Templating\Helper;
 
-use Symfony\Components\Templating\Helper\Helper;
+use Symfony\Component\Templating\Helper\Helper;
 
 class TwitterAnywhereHelper extends Helper
 {
