@@ -3,7 +3,7 @@ Installation
 
   1. Add this bundle and Abraham Williams' Twitter library to your project as Git submodules:
 
-          $ git submodule add git://github.com/kriswallsmith/TwitterBundle.git src/Bundle/Kris/TwitterBundle
+          $ git submodule add git://github.com/kriswallsmith/KrisTwitterBundle.git src/Bundle/Kris/TwitterBundle
           $ git submodule add git://github.com/abraham/twitteroauth.git src/vendor/twitteroauth
 
   2. Add the `TwitterOAuth` class to your project's autoloader bootstrap script:
