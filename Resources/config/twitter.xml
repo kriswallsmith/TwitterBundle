@@ -19,7 +19,7 @@
             <argument>%kris.twitter.consumer_secret%</argument>
         </service>
         <service id="kris.twitter.anywhere.helper" class="%kris.twitter.anywhere.helper.class%">
-            <annotation name="templating.helper" alias="twitter_anywhere" />
+            <tag name="templating.helper" alias="twitter_anywhere" />
             <argument>%kris.twitter.consumer_key%</argument>
             <argument>%kris.twitter.anywhere.version%</argument>
             <argument>%kris.twitter.anywhere.callback_url%</argument>
