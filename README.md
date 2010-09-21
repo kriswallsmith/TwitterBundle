@@ -9,13 +9,9 @@ Installation
   2. Add the `TwitterOAuth` class to your project's autoloader bootstrap script:
 
           // src/autoload.php
-          spl_autoload_register(function($class)
-          {
-              if ('TwitterOAuth' == $class) {
-                  require_once __DIR__.'/vendor/twitteroauth/twitteroauth/twitteroauth.php';
-                  return true;
-              }
-          });
+          $loader->registerPrefixes(array(
+              'TwitterOAuth' => $vendorDir.'/twitteroauth/twitteroauth',
+          ));
 
   3. Add this bundle to your application's kernel:
 
@@ -68,4 +64,8 @@ Finally, call the `->initialize()` method toward the bottom of the DOM:
 
 You can define a custom callback URL to use for the Twitter @Anywhere
 authentication process by setting a `kris.twitter.anywhere.callback_url`
-parameter in your configuration.
+parameter in your configuration:
+
+          # application/config/config.yml
+          parameters:
+            kris.twitter.anywhere.callback_url: http://example.org/callback
