@@ -15,8 +15,7 @@ class TwitterExtension extends Extension
     public function apiLoad($config, ContainerBuilder $container)
     {
         if (!$container->hasDefinition('kris.twitter')) {
-            $loader = new XmlFileLoader($container, __DIR__.'/../Resources/config');
-            $loader->load($this->resources['twitter']);
+            $this->loadDefaults($container);
         }
 
         if (isset($config['alias'])) {
@@ -30,18 +29,36 @@ class TwitterExtension extends Extension
         }
     }
 
+    /**
+     * @codeCoverageIgnore
+     */
     public function getXsdValidationBasePath()
     {
         return __DIR__.'/../Resources/config/schema';
     }
 
+    /**
+     * @codeCoverageIgnore
+     */
     public function getNamespace()
     {
         return 'http://kriswallsmith.net/schema/dic/twitter';
     }
 
+    /**
+     * @codeCoverageIgnore
+     */
     public function getAlias()
     {
         return 'twitter';
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    protected function loadDefaults($container)
+    {
+        $loader = new XmlFileLoader($container, __DIR__.'/../Resources/config');
+        $loader->load($this->resources['twitter']);
     }
 }
