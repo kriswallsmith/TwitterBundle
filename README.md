@@ -10,7 +10,7 @@ Installation
 
           // src/autoload.php
           $loader->registerPrefixes(array(
-              'TwitterOAuth' => $vendorDir.'/twitteroauth/twitteroauth',
+              'TwitterOAuth' => __DIR__.'/vendor/twitteroauth/twitteroauth',
           ));
 
   3. Add this bundle to your application's kernel:
@@ -66,6 +66,6 @@ You can define a custom callback URL to use for the Twitter @Anywhere
 authentication process by setting a `kris.twitter.anywhere.callback_url`
 parameter in your configuration:
 
-          # application/config/config.yml
-          parameters:
-            kris.twitter.anywhere.callback_url: http://example.org/callback
+    # application/config/config.yml
+    parameters:
+      kris.twitter.anywhere.callback_url: http://example.org/callback
