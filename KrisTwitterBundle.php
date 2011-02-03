@@ -15,8 +15,8 @@ class KrisTwitterBundle extends Bundle
     }
 
     /**
-		* {@inheritdoc}
-		*/
+    * {@inheritdoc}
+    */
     public function getPath()
     {
         return strtr(__DIR__, '\\', '/');
